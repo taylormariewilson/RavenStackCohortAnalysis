@@ -1,0 +1,974 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='v_cohort_onboarding_insights' inline='true' name='federated.1ivomqc0p37laj1e765hg1sguxnd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='v_cohort_onboarding_insights' name='textscan.1pu5vg70y1i3761c4np6t13fq67l'>
+            <connection class='textscan' directory='C:/data/dataproject/RavenStack_Project' filename='v_cohort_onboarding_insights.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1pu5vg70y1i3761c4np6t13fq67l' name='v_cohort_onboarding_insights.csv' table='[v_cohort_onboarding_insights#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='cohort_month' ordinal='0' />
+            <column datatype='integer' name='starting_size' ordinal='1' />
+            <column datatype='real' name='month_1_retention_rate' ordinal='2' />
+            <column datatype='real' name='avg_tickets_per_user' ordinal='3' />
+            <column datatype='real' name='avg_response_time_hours' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cohort_month</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[cohort_month]</local-name>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias>cohort_month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starting_size</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[starting_size]</local-name>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias>starting_size</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_1_retention_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[month_1_retention_rate]</local-name>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias>month_1_retention_rate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_tickets_per_user</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_tickets_per_user]</local-name>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias>avg_tickets_per_user</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_response_time_hours</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_response_time_hours]</local-name>
+            <parent-name>[v_cohort_onboarding_insights.csv]</parent-name>
+            <remote-alias>avg_response_time_hours</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='v_cohort_onboarding_insights.csv' datatype='table' name='[__tableau_internal_object_id__].[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]' role='measure' type='quantitative' />
+      <column caption='Avg Response Time Hours' datatype='real' name='[avg_response_time_hours]' role='measure' type='quantitative' />
+      <column caption='Avg Tickets Per User' datatype='real' name='[avg_tickets_per_user]' role='measure' type='quantitative' />
+      <column caption='Cohort Month' datatype='date' name='[cohort_month]' role='dimension' type='ordinal' />
+      <column caption='Month 1 Retention Rate' datatype='real' name='[month_1_retention_rate]' role='dimension' type='quantitative' />
+      <column caption='Starting Size' datatype='integer' name='[starting_size]' role='measure' type='quantitative' />
+      <column-instance column='[avg_tickets_per_user]' derivation='Avg' name='[avg:avg_tickets_per_user:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[month_1_retention_rate]' derivation='None' name='[none:month_1_retention_rate:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[avg_tickets_per_user]' derivation='Sum' name='[sum:avg_tickets_per_user:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[cohort_month]' derivation='Month-Trunc' name='[tmn:cohort_month:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Cohort Month)' hidden='true' name='[Action (Cohort Month)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[cohort_month]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (MONTH(Cohort Month),Month 1 Retention Rate)' hidden='true' name='[Action (MONTH(Cohort Month),Month 1 Retention Rate)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[tmn:cohort_month:ok]' />
+          <groupfilter function='level-members' level='[none:month_1_retention_rate:ok]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Taylor/AppData/Local/Temp/TableauTemp/#TableauTemp_0vt5s6i0wvfvci17hp1uj0g300we.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/27/2026 02:05:51 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>cohort_month</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[cohort_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cohort_month</remote-alias>
+              <ordinal>0</ordinal>
+              <family>v_cohort_onboarding_insights.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>starting_size</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[starting_size]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>starting_size</remote-alias>
+              <ordinal>1</ordinal>
+              <family>v_cohort_onboarding_insights.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_1_retention_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[month_1_retention_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_1_retention_rate</remote-alias>
+              <ordinal>2</ordinal>
+              <family>v_cohort_onboarding_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_tickets_per_user</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_tickets_per_user]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_tickets_per_user</remote-alias>
+              <ordinal>3</ordinal>
+              <family>v_cohort_onboarding_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_response_time_hours</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_response_time_hours]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_response_time_hours</remote-alias>
+              <ordinal>4</ordinal>
+              <family>v_cohort_onboarding_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#00a3ff'>
+              <bucket>&quot;[federated.1ivomqc0p37laj1e765hg1sguxnd]&quot;</bucket>
+            </map>
+            <map to='#4b5563'>
+              <bucket>&quot;[federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_tickets_per_user:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1ivomqc0p37laj1e765hg1sguxnd].[sum:avg_tickets_per_user:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='v_cohort_onboarding_insights.csv' id='v_cohort_onboarding_insights.csv_F1D4671A5EC2493BA681B5A72E2F98E3'>
+            <properties context=''>
+              <relation connection='textscan.1pu5vg70y1i3761c4np6t13fq67l' name='v_cohort_onboarding_insights.csv' table='[v_cohort_onboarding_insights#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='cohort_month' ordinal='0' />
+                  <column datatype='integer' name='starting_size' ordinal='1' />
+                  <column datatype='real' name='month_1_retention_rate' ordinal='2' />
+                  <column datatype='real' name='avg_tickets_per_user' ordinal='3' />
+                  <column datatype='real' name='avg_response_time_hours' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter1' name='[Action1_F3E1AC12D3E94A7CA67F62EC89E993CB]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Onboarding Volume Trends' />
+      <link caption='Filter1' delimiter=',' escape='\' expression='tsl:Dashboard%201?%5Bfederated.1ivomqc0p37laj1e765hg1sguxnd%5D.%5Bcohort_month%5D~s0=&lt;[federated.1ivomqc0p37laj1e765hg1sguxnd].[cohort_month]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Onboarding Volume Trends' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <datasources>
+      <datasource caption='v_cohort_onboarding_insights' name='federated.1ivomqc0p37laj1e765hg1sguxnd' />
+    </datasources>
+    <datasource-dependencies datasource='federated.1ivomqc0p37laj1e765hg1sguxnd'>
+      <column caption='Cohort Month' datatype='date' name='[cohort_month]' role='dimension' type='ordinal' />
+    </datasource-dependencies>
+  </actions>
+  <worksheets>
+    <worksheet name='Onboarding Volume Trends'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='v_cohort_onboarding_insights' name='federated.1ivomqc0p37laj1e765hg1sguxnd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ivomqc0p37laj1e765hg1sguxnd'>
+            <column-instance column='[avg_tickets_per_user]' derivation='Avg' name='[avg:avg_tickets_per_user:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Tickets Per User' datatype='real' name='[avg_tickets_per_user]' role='measure' type='quantitative' />
+            <column caption='Cohort Month' datatype='date' name='[cohort_month]' role='dimension' type='ordinal' />
+            <column caption='Month 1 Retention Rate' datatype='real' name='[month_1_retention_rate]' role='dimension' type='quantitative' />
+            <column-instance column='[cohort_month]' derivation='None' name='[none:cohort_month:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month_1_retention_rate]' derivation='None' name='[none:month_1_retention_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cohort_month]' derivation='Month-Trunc' name='[tmn:cohort_month:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='title' class='0' field='[federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_tickets_per_user:qk]' scope='rows' value='Average Tickets Per User' />
+            <format attr='title' class='0' field='[federated.1ivomqc0p37laj1e765hg1sguxnd].[tmn:cohort_month:qk]' scope='cols' value='Month of Cohort Month' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='cols' value='#f8f7f4' />
+            <format attr='band-color' scope='rows' value='#f8f7f4' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='cols' value='#f8f7f4' />
+            <format attr='band-color' scope='rows' value='#f8f7f4' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='1' />
+            <format attr='background-color' value='#f8f7f4' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_tickets_per_user:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[:Measure Names]' />
+              <lod column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:cohort_month:qk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_tickets_per_user:qk] + [federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk])</rows>
+        <cols>[federated.1ivomqc0p37laj1e765hg1sguxnd].[tmn:cohort_month:qk]</cols>
+      </table>
+      <simple-id uuid='{E3F59760-3B21-4B1C-A80C-C5AF207B9C0F}' />
+    </worksheet>
+    <worksheet name='Operational SLA vs Retention'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='v_cohort_onboarding_insights' name='federated.1ivomqc0p37laj1e765hg1sguxnd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ivomqc0p37laj1e765hg1sguxnd'>
+            <column-instance column='[avg_response_time_hours]' derivation='Avg' name='[avg:avg_response_time_hours:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Response Time Hours' datatype='real' name='[avg_response_time_hours]' role='measure' type='quantitative' />
+            <column caption='Cohort Month' datatype='date' name='[cohort_month]' role='dimension' type='ordinal' />
+            <column caption='Month 1 Retention Rate' datatype='real' name='[month_1_retention_rate]' role='dimension' type='quantitative' />
+            <column-instance column='[cohort_month]' derivation='None' name='[none:cohort_month:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month_1_retention_rate]' derivation='None' name='[none:month_1_retention_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[Action (Cohort Month)]'>
+            <groupfilter function='level-members' level='[cohort_month]' user:ui-action-filter='[Action1_F3E1AC12D3E94A7CA67F62EC89E993CB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ivomqc0p37laj1e765hg1sguxnd].[Action (Cohort Month)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_response_time_hours:qk]' scope='cols' value='Average Onboarding Response Time (Hours)' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f8f7f4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:cohort_month:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#aaaa00' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk]</rows>
+        <cols>[federated.1ivomqc0p37laj1e765hg1sguxnd].[avg:avg_response_time_hours:qk]</cols>
+      </table>
+      <simple-id uuid='{DE64CB01-F140-42B1-8725-CBC680C40606}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f8f7f4' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='91542' id='8' param='horz' type-v2='layout-flow' w='99064' x='468' y='7586'>
+            <zone h='91542' id='6' type-v2='layout-basic' w='99064' x='468' y='7586'>
+              <zone h='45769' id='3' name='Operational SLA vs Retention' show-title='false' w='99064' x='468' y='7586'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f8f7f4' />
+                </zone-style>
+              </zone>
+              <zone h='45773' id='5' name='Onboarding Volume Trends' show-title='false' w='99064' x='468' y='53355'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f8f7f4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='6714' id='12' type-v2='text' w='99064' x='468' y='872'>
+            <formatted-text>
+              <run bold='true' fontname='Segoe UI' fontsize='16'>RavenStack Subscription Onboarding Optimization Dashboard</run>
+              <run>Æ&#10;</run>
+              <run fontname='Segoe UI' fontsize='11'>Analyzing the Impact of Support Response Times (SLAs) on Month 1 Customer Cohort Retention</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f8f7f4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98256' id='15' param='vert' type-v2='layout-flow' w='99064' x='468' y='872'>
+                <zone forceUpdate='true' h='6714' id='12' type-v2='text' w='99064' x='468' y='872'>
+                  <formatted-text>
+                    <run bold='true' fontname='Segoe UI' fontsize='16'>RavenStack Subscription Onboarding Optimization Dashboard</run>
+                    <run>Æ&#10;</run>
+                    <run fontname='Segoe UI' fontsize='11'>Analyzing the Impact of Support Response Times (SLAs) on Month 1 Customer Cohort Retention</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f8f7f4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45769' id='3' is-fixed='true' name='Operational SLA vs Retention' show-title='false' w='99064' x='468' y='7586'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f8f7f4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45773' id='5' is-fixed='true' name='Onboarding Volume Trends' show-title='false' w='99064' x='468' y='53355'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f8f7f4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{28036DD5-B86C-430F-A95F-EA0B7225B671}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Operational SLA vs Retention'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk]</field>
+            <field>[federated.1ivomqc0p37laj1e765hg1sguxnd].[yr:cohort_month:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{12D98587-609E-4201-9C1D-967A7C8FA152}' />
+    </window>
+    <window class='worksheet' name='Onboarding Volume Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1ivomqc0p37laj1e765hg1sguxnd].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ivomqc0p37laj1e765hg1sguxnd].[none:month_1_retention_rate:qk]</field>
+            <field>[federated.1ivomqc0p37laj1e765hg1sguxnd].[yr:cohort_month:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E8C68951-E417-4F0B-921B-F9DC296FB7F1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Onboarding Volume Trends'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1ivomqc0p37laj1e765hg1sguxnd].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Operational SLA vs Retention'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{0333DA46-1BDF-4424-830A-B37DA2BA3CEC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Onboarding Volume Trends' width='192'>
+      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
+      YII=
+    </thumbnail>
+    <thumbnail height='192' name='Operational SLA vs Retention' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
